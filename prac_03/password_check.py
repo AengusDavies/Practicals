@@ -1,6 +1,7 @@
 """
 CP1404 - Practical
-Program that validates a password, then prints as asterisks
+Program that asks user for password & prints as asterisks once it has met
+length requirements
 """
 
 minimum_length = 5
