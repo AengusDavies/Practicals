@@ -2,6 +2,7 @@
 CP1404/CP5632 - Practical
 Program that determines score status
 """
+# import random
 
 
 def main():
@@ -10,6 +11,8 @@ def main():
         print("Invalid score")
         score = float(input("Enter score: "))
     result = determine_score(score)
+    # score = random.randint(0, 101)
+    # result = determine_score(score)
     print(result)
 
 
