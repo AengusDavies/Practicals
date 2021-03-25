@@ -29,7 +29,10 @@ print(a_names)
 
 # TODO: use a list comprehension to create a list of all of the full_names
 # in lowercase format
-#lowercase_full_names =
+lowercase_full_names = []
+for full_name in full_names:
+    lowercase_full_names.append(full_name.lower())
+    print(lowercase_full_names)
 
 almost_numbers = ['0', '10', '21', '3', '-7', '88', '9']
 # TODO: use a list comprehension to create a list of integers
