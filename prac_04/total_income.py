@@ -1,6 +1,6 @@
 """
 CP1404/CP5632 Practical
-Starter code for cumulative total income program
+Program for a cumulative total income program
 """
 
 
@@ -16,6 +16,7 @@ def main():
 
 
 def print_report(incomes, number_of_months):
+    """Print income report based on given number of months"""
     print("\nIncome Report\n-------------")
     total = 0
     for month in range(1, number_of_months + 1):
