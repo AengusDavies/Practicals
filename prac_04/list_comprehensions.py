@@ -44,3 +44,10 @@ print(numbers)
 
 # TODO: use a list comprehension to create a list of only the numbers that are
 # greater than 9 from the numbers (not strings) you just created
+greater_numbers = []
+number_threshold = 9
+list_of_numbers = numbers
+for list_of_number in list_of_numbers:
+    if list_of_number > number_threshold:
+        greater_numbers = list_of_numbers.append(list_of_number)
+print(greater_numbers)
