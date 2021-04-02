@@ -13,3 +13,4 @@ for word in words:
     except KeyError:
         words_to_count[word] = 1
 words = list(words_to_count.keys())
+words.sort()
