@@ -11,3 +11,4 @@ COLOUR_CODES = {"black": "#000000", "hotpink": "#ff69b4", "ivory1": "#fffff0", "
 colour_name = str(input("Colour Name: ").lower())
 while colour_name != "":
     print("The colour code for {} is {}". format(colour_name, COLOUR_CODES.get(colour_name)))
+    colour_name = str(input("Colour Name: ").lower())
