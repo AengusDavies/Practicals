@@ -13,6 +13,7 @@ KM_MULTIPLIER = 1.60934
 class MilesKmApp(App):
     output_text = StringProperty()
     """A Kivy app for converting miles to km"""
+
     def build(self):
         self.title = "Convert Miles to Kilometres"
         self.root = Builder.load_file('convert_miles_km.kv')
@@ -23,8 +24,17 @@ class MilesKmApp(App):
         result = value * KM_MULTIPLIER
         self.root.ids.output_label.text = str(result)
 
-    def handle_increment(self, value):
-        pass
+    def handle_increment(self, addition):
+        """Handle increment of +1 or -1 depending on button pressed was Up or Down"""
+        new_value = self.handle_invalid_input() + addition
+
+    def handle_invalid_input(self):
+        """Handle an invalid input by turning it into a zero"""
+        try:
+            value = float(self.root.ids.input_number.text)
+            return value
+        except ValueError:
+            return 0.1
 
 
 MilesKmApp().run()
