@@ -12,7 +12,9 @@ class MilesKmApp(App):
     output_text = StringProperty()
     """A Kivy app for converting miles to km"""
     def build(self):
-        pass
+        self.title = "Convert Miles to Kilometres"
+        self.root = Builder.load_file('convert_miles_km.kv')
+        return self.root
 
     def handle_calculation(self, value):
 
