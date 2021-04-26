@@ -7,6 +7,8 @@ from kivy.app import App
 from kivy.lang import Builder
 from kivy.app import StringProperty
 
+KM_MULTIPLIER = 1.60934
+
 
 class MilesKmApp(App):
     output_text = StringProperty()
@@ -17,6 +19,9 @@ class MilesKmApp(App):
         return self.root
 
     def handle_calculation(self, value):
+        """Handle calculation for converting miles to kilometres"""
+        result = value * KM_MULTIPLIER
+        self.root.ids.output_label.text = str(result)
 
     def handle_increment(self, value):
         pass
