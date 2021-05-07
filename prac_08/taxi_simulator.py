@@ -18,7 +18,9 @@ def main():
     menu_choice = input(">>> ").lower()
     while menu_choice != "q":
         if menu_choice == "c":
-            pass
+            print("Taxis available:")
+            for i, taxi in enumerate(taxis):
+                print(f"{i} - {taxi}")
         elif menu_choice == "d":
             pass
 
