@@ -39,9 +39,10 @@ def main():
                 print("You need to choose a taxi before you can drive")
         else:
             print("Invalid option")
+        print(f"Bill to date: ${bill:.2f}")
         print(MENU)
         menu_choice = input(">>> ").lower()
-    print(f"Total trip cost: {bill}")
+    print(f"Total trip cost: {bill:.2f}")
     print("Taxis are now: ")
     print_taxi_list(taxis)
 
