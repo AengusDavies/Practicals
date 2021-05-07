@@ -20,8 +20,19 @@ def main():
         if menu_choice == "c":
             print("Taxis available:")
             print_taxi_list(taxis)
+            taxi_choice = int(input("Choose taxi: "))
+            # better to ask for forgiveness than permission
+            try:
+                current_taxi = taxis[taxi_choice]
+            except IndexError:
+                print("Invalid taxi choice")
         elif menu_choice == "d":
             pass
+        else:
+            print("Invalid option")
+        print(MENU)
+        menu_choice = input(">>> ").lower()
+
 
 
 def print_taxi_list(taxis):
