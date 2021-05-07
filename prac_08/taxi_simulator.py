@@ -19,10 +19,14 @@ def main():
     while menu_choice != "q":
         if menu_choice == "c":
             print("Taxis available:")
-            for i, taxi in enumerate(taxis):
-                print(f"{i} - {taxi}")
+            print_taxi_list(taxis)
         elif menu_choice == "d":
             pass
+
+
+def print_taxi_list(taxis):
+    for i, taxi in enumerate(taxis):
+        print(f"{i} - {taxi}")
 
 
 main()
