@@ -23,6 +23,8 @@ def main():
                 os.mkdir(new_category)
             except FileExistsError:
                 pass
+        file_addition = "{}/{}".format(category_extension[extension], filename)
+        os.rename(filename, file_addition)
 
 
 main()
