@@ -19,8 +19,10 @@ def main():
         if extension not in category_extension:
             new_category = str(input(f"What category would you like to sort {extension} files into? "))
             category_extension[extension] = new_category
-
-
+            try:
+                os.mkdir(new_category)
+            except FileExistsError:
+                pass
 
 
 main()
